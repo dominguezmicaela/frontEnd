@@ -21,11 +21,11 @@
         <ul>
           <li><a href="../index.html">Inicio</a></li>
           <li>
-            <a href="./pages/contacto.html">Contacto</a>
+            <a href="../pages/contacto.html">Contacto</a>
           </li>
           <li>
-            <a href="./pages/carrito.html">
-            🛒<span id="contador-carrito">Carrito</span>
+            <a href="../pages/carrito.html">🛒Carrito
+            <span id="contador-carrito"></span>
             </a>
           </li>
         </ul>
@@ -34,22 +34,27 @@
 
     
 
-    <main>
-      <h1 class="carrito"> Carrito de compras</h1>
-      <section id="contenedor-carrito">
-        <!-- Aca van a ir los productos del carrito -->
-      </section>
-      <div class="acciones-carrito" id="acciones-carrito">
-         <!-- Aca espacio para los botones de eliminar y finalizar la compra -->
-      </div>
-      <section id="resumen-carrito">
-        <!-- Aca tiene que ir el resumen -->
-      </section>
-    </main>
+<main>
+    <h1 class="carrito">Carrito de compras</h1>
+    
+    <div class="contenedor-flex">
+    
+        <div class="columna-izquierda">
+            <section id="contenedor-carrito">
+                </section>
+            
+            <div class="acciones-carrito" id="acciones-carrito">
+                </div>
+        </div>
 
+        <section id="resumen-carrito" class="columna-derecha">
+             </section>
+
+    </div>
+</main>
 
     <footer>Sitio realizado por Micaela</footer>
-    <script src="./js/carrito.js" type="module">  </script>
+    <script src="../js/carrito.js" type="module">  </script>
     <nav>
       <ul>
         <li>Instagram</li>

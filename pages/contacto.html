@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Huellitas</title>
   </head>
 
@@ -29,10 +29,10 @@
         <ul>
           <li><a href="../index.html">Inicio</a></li>
           <li>
-            <a href="./pages/contacto.html">Contacto</a>
+            <a href="../pages/contacto.html">Contacto</a>
           </li>
           <li>
-            <a href="./pages/carrito.html">🛒Carrito
+            <a href="../pages/carrito.html">🛒Carrito
               <span id="contador-carrito"></span>
             </a>
           </li>
@@ -42,10 +42,27 @@
 
     <main>
       <h1 class="titulo-home">Contactanos</h1>
-
+      <form 
+       class="form-contacto"
+       action="https://formspree.io/f/xwprwegz"
+       method="POST">
+       <div class="grupo-input">
+        <label for="email">Email</label>
+        <input id="email"type="email"name="email" />
+        </div>
+      <div class="grupo-input">
+        <label for="mensaje">Ingrese un mensaje</label>
+        <textarea id="mensaje" name="message"></textarea>
+        
+      </div>
+      <button class="btn" type="submit">Enviar</button>
+      
+      </form>
     </main>
+
+
     <footer>Sitio realizado por Micaela</footer>
-    <script src="./js/index.js" type="module"></script>
+    <script src="./js/contacto.js" type="module"></script>
     <nav>
       <ul>
         <li>Instagram</li>

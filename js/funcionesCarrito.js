@@ -1,12 +1,23 @@
+import { alertaProductoAgregado } from "./alertas.js";
 import { guardarCarrito, obtenerCarrito, vaciarCarritoS } from "./storage.js";
 import { actualizarContador, mostrarMensaje } from "./ui.js";
 //agregarr
 export const agregarAlCarrito = (producto) => {
   const carrito = obtenerCarrito();
-  carrito.push(producto); //insrta producto
-  guardarCarrito(carrito); //actualiza la info en el local storage
+  const productoExistente = carrito.find((p) => p.id === producto.id);
+
+  if (productoExistente) {
+    // Si ya existe, sumamos la cantidad
+    productoExistente.cantidad++;
+  } else {
+    // Si es nuevo, lo agregamos con cantidad base 1
+    producto.cantidad = 1;
+    carrito.push(producto);
+  }
+
+  guardarCarrito(carrito);
   actualizarContador(carrito);
-  mostrarMensaje("Producto agregado");
+  alertaProductoAgregado(producto);
 };
 //eliminar
 export const eliminarProducto = (indice) => {
@@ -17,6 +28,7 @@ export const eliminarProducto = (indice) => {
   mostrarMensaje("Producto eliminado");
 };
 
+//vaciar el carrito
 export const vaciarCarrito = () => {
   vaciarCarritoS();
   actualizarContador([]);
