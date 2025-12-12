@@ -25,19 +25,24 @@
           />
         </a>
       </div>
-      <nav class="header-nav">
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li>
-            <a href="../pages/contacto.html">Contacto</a>
-          </li>
-          <li>
-            <a href="../pages/carrito.html">🛒Carrito
-              <span id="contador-carrito"></span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+          <nav class="menu-navegacion">
+    
+    <a href="../index.html" class="mi-boton">
+      <img src="../img/INICIO.png" class="icono-img" alt="Inicio"> 
+      Inicio
+    </a>
+
+    <a href="./pages/contacto.html" class="mi-boton">
+      <img src="../img/CONTACTO.png" class="icono-img" alt="Contacto">
+      Contacto
+    </a>
+
+    <a href="../pages/carrito.html" class="mi-boton">
+      <img src="../img/CARRITO.png" class="icono-img" alt="Carrito">
+      Carrito
+    </a>
+
+  </nav>
     </header>
 
 <main class="contacto-main">
@@ -48,6 +53,14 @@
 
         <form action="https://formspree.io/f/xwprwegz" method="POST" class="form-area">
             
+            <div class="grupo-input">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" type="text" name="name" placeholder="Tu nombre" required />
+            </div>
+            <div class="grupo-input">
+              <label for="apellido">Apellido</label>
+              <input id="apellido" type="text" name="name" placeholder="Tu apellido" required />
+            </div>
             <div class="grupo-input">
                 <label for="email">Email</label>
                 <input id="email" type="email" name="email" placeholder="tucorreo@ejemplo.com" required />
@@ -64,14 +77,27 @@
     </div>
 </main>
 
-    <footer>Sitio realizado por Micaela</footer>
-    <script src="./js/contacto.js" type="module"></script>
-    <nav>
-      <ul>
-        <li>Instagram</li>
-        <li>Whatsapp</li>
-        <li>Facebook</li>
-      </ul>
+       <footer class="pie-pagina">
+    <p class="autor">Sitio realizado por Micaela</p>
+    
+    <nav class="redes-sociales">
+        <a href="#" target="_blank">
+            <img src="../img/instagram.png" alt="Instagram" class="icono-img">
+            Instagram
+        </a>
+
+        <a href="#" target="_blank">
+            <img src="../img/whatsapp.png" alt="Whatsapp" class="icono-img">
+            Whatsapp
+        </a>
+
+        <a href="#" target="_blank">
+            <img src="../img/facebook.png" alt="Facebook" class="icono-img">
+            Facebook
+        </a>
     </nav>
+</footer>
+    <script src="./js/contacto.js" type="module"></script>
+    
   </body>
 </html>

@@ -26,19 +26,24 @@
           />
         </a>
       </div>
-      <nav class="header-nav">
-        <ul>
-          <li><a href="./index.html">Inicio</a></li>
-          <li>
-            <a href="./pages/contacto.html">Contacto</a>
-          </li>
-          <li>
-            <a href="./pages/carrito.html">🛒Carrito
-              <span id="contador-carrito"></span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <nav class="menu-navegacion">
+    
+    <a href="./index.html" class="mi-boton">
+      <img src="./img/INICIO.png" class="icono-img" alt="Inicio"> 
+      Inicio
+    </a>
+
+    <a href="./pages/contacto.html" class="mi-boton">
+      <img src="./img/CONTACTO.png" class="icono-img" alt="Contacto">
+      Contacto
+    </a>
+
+    <a href="./pages/carrito.html" class="mi-boton">
+      <img src="./img/CARRITO.png" class="icono-img" alt="Carrito">
+      Carrito
+    </a>
+
+  </nav>
     </header>
 
     <main>
@@ -56,14 +61,55 @@
         <div id="contenedor-tarjetas" class="contenedor-tarjetas"></div>
       </section>
     </main>
-    <footer>Sitio realizado por Micaela</footer>
-    <script src="./js/index.js" type="module"></script>
-    <nav>
-      <ul>
-        <li>Instagram</li>
-        <li>Whatsapp</li>
-        <li>Facebook</li>
-      </ul>
+    <section class="seccion-resenas">
+    <h2 class="titulo-resenas">Lo que dicen nuestros clientes</h2>
+    
+    <div class="contenedor-carrusel-resenas">
+        <button class="flecha-resena" id="btn-prev-resena">&#10094;</button>
+
+        <div id="track-resenas" class="track-resenas">
+            </div>
+
+        <button class="flecha-resena" id="btn-next-resena">&#10095;</button>
+    </div>
+
+    <div class="form-resena-wrapper">
+        <h3>¡Déjanos tu opinión!</h3>
+        <form id="form-resena">
+            <input type="text" id="inputNombre" placeholder="Tu nombre" required>
+            <select id="inputEstrellas">
+                <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+                <option value="4">⭐⭐⭐⭐ (4)</option>
+                <option value="3">⭐⭐⭐ (3)</option>
+                <option value="2">⭐⭐ (2)</option>
+                <option value="1">⭐ (1)</option>
+            </select>
+            <textarea id="inputComentario" placeholder="¿Qué te pareció el producto?" required></textarea>
+            <button type="submit" class="btn-publicar">Publicar Reseña</button>
+        </form>
+    </div>
+</section>
+       <footer class="pie-pagina">
+    <p class="autor">Sitio realizado por Micaela</p>
+    
+    <nav class="redes-sociales">
+        <a href="#" target="_blank">
+            <img src="./img/instagram.png" alt="Instagram" class="icono-img">
+            Instagram
+        </a>
+
+        <a href="#" target="_blank">
+            <img src="./img/whatsapp.png" alt="Whatsapp" class="icono-img">
+            Whatsapp
+        </a>
+
+        <a href="#" target="_blank">
+            <img src="./img/facebook.png" alt="Facebook" class="icono-img">
+            Facebook
+        </a>
     </nav>
+</footer>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/resenas.js" type="module"></script>
   </body>
 </html>

@@ -79,3 +79,17 @@ export const alertaProductoEliminadoExitoso = (nombre) => {
         buttonsStyling: false
     });
 };
+// alerta resena
+
+export const alertaResenaPublicada = () => {
+    return Swal.fire({
+        title: "¡Gracias por tu opinión!",
+        text: "Tu reseña ha sido publicada con éxito.",
+        icon: "success",
+        customClass: estilosComunes, // Usa tus estilos beige/verde
+        buttonsStyling: false,       // Desactiva los estilos por defecto
+        confirmButtonText: "Genial",
+        timer: 3000,                 // Se cierra sola a los 3 segundos (opcional)
+        timerProgressBar: true
+    });
+};
