@@ -3,7 +3,9 @@
 **Proyecto Final - Curso de Desarrollo Web**
 
 ¡Bienvenidos a **Huellitas**! Este es un sitio web e-commerce desarrollado como proyecto final, simulando una tienda real de productos para mascotas. El objetivo fue crear una aplicación web dinámica, responsiva y funcional utilizando tecnologías Front-End.
+Una descripción breve de lo que hace mi proyecto.
 
+🚀 [Ver Demo en Vivo](https://dominguezmicaela.github.io/frontEnd/)
 ---
 
 ## 📋 Consignas y Requisitos Cumplidos
