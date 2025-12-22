@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const img = document.createElement("img");
         img.alt = producto.nombre;
-        img.src = `./img/${producto.img}`;
+        img.src = `img/${producto.img}`;
 
         const titulo = document.createElement("h3");
         titulo.textContent = producto.nombre;
