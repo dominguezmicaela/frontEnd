@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("contenedor-tarjetas");
   const carrito = obtenerCarrito();
   actualizarContador(carrito);
-  fetch("'https://petshophuellitas.onrender.com/api/productos'")//cambio ruta
+  fetch("https://petshophuellitas.onrender.com/api/productos")//cambio ruta
     .then((res) => {
       if (!res.ok) {
         throw new Error(`Error HTTP status: ${res.status}`); // prestar atencion al tipo de comillas
