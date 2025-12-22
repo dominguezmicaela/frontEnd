@@ -24,8 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const img = document.createElement("img");
         img.alt = producto.nombre;
         img.src = `img/${producto.img}`;
-        // priorizo la carga de imagenes 
-        imagen.loading = "lazy";
+        
   
         const titulo = document.createElement("h3");
         titulo.textContent = producto.nombre;
