@@ -16,6 +16,8 @@ El proyecto ha sido reestructurado para funcionar con una arquitectura de tres c
 * **Framework:** Desarrollado con **.NET 9 /C#**.
 * **Arquitectura:** Controladores y servicios para la gestión de productos
 * **Hosting:** Desplegado en **Render**.
+La base de datos está diseñada en **PostgreSQL (Neon)** y sigue las normas de normalización hasta **3FN**, asegurando integridad referencial y eficiencia en las consultas.
+![Diagrama de Entidad Relación](./docs/diagrams/der-huellitas.png)
 
 ### 2. Base de Datos
 * **Motor:** **PostgreSQL**.
