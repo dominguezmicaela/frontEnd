@@ -16,8 +16,6 @@ El proyecto ha sido reestructurado para funcionar con una arquitectura de tres c
 * **Framework:** Desarrollado con **.NET 9 /C#**.
 * **Arquitectura:** Controladores y servicios para la gestión de productos
 * **Hosting:** Desplegado en **Render**.
-La base de datos está diseñada en **PostgreSQL (Neon)** y sigue las normas de normalización hasta **3FN**, asegurando integridad referencial y eficiencia en las consultas.
-![Diagrama de Entidad Relación](./docs/diagrams/huellitasdb.png)
 
 ### 2. Base de Datos
 * **Motor:** **PostgreSQL**.
@@ -54,7 +52,11 @@ Para este proyecto aplique una metodología de desarrollo ágil y moderna:
 * ![GitHub Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
 
 ---
+## Estructura de base de datos
+![Diagrama de Base de Datos](./docs/diagrams/huellitasdb.png)
 ## Mejoras
 Se tienen en cuenta aspectos de mejora progresiva.
+
+
 
 *Proyecto realizado por Micaela Belen Dominguez. *
