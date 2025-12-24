@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
 
-namespace huellitas.core
+namespace Huellitas.Core
 {
     [Table("Categoria")]
     public class Categoria

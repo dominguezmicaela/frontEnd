@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Common;
 
 
-namespace huelitas.Core{
+namespace Huellitas.Core{
 
     [Table("producto")]
 
@@ -20,7 +20,7 @@ namespace huelitas.Core{
         public int stockActual{get;set;}
         public int stockMinimo{get;set;}
         public int idCategoria{get;set;}
-        [ForeignKey]
+        [ForeignKey("idCategoria")]
         public virtual Categoria Categoria{get;set;}=null;
 
         //metodos
