@@ -1,4 +1,4 @@
-using huelitas.Core;
+using Huellitas.Core;
 using Microsoft.EntityFrameworkCore;
 namespace Huellitas.Data
 {

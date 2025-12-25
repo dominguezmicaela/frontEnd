@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Huellitas.Data; 
-using huelitas.Core;     
-using Microsoft.EntityFrameworkCore; 
+using Huellitas.Core;     
+using Microsoft.EntityFrameworkCore;
+using System.IO.Compression;
 
 namespace Huellitas.Api.Controllers
 {
@@ -23,6 +24,17 @@ namespace Huellitas.Api.Controllers
         {
             return await _context.Productos.ToListAsync();
         }
+        //obtener uno solo 
+        [HttpGet("{idProducto}")]
+        public async Task <ActionResult<Producto>> GetProducto(int id)
+        {
+            var producto=await _context.Productos.FindAsync(id);
+            if (producto == null)
+            {
+                return NotFound("El producto no existee");
+            }
+            return producto;
+        }
 
         // GUARDAR
         [HttpPost]
@@ -31,11 +43,11 @@ namespace Huellitas.Api.Controllers
             _context.Productos.Add(producto);
             await _context.SaveChangesAsync(); // ¡Aquí es donde se guarda en SQL Server!
 
-            return CreatedAtAction("GetProductos", new { id = producto.Id }, producto);
+            return CreatedAtAction("GetProductos", new { id = producto.idProducto }, producto);
         }
         //BORRAR
         // BORRAR (Versión para Base de Datos)
-        [HttpDelete("{id}")]
+        [HttpDelete("{idProducto}")]
         public async Task<IActionResult> DeleteProducto(int id)
         {
             //busca el producto en la bdd usando el _context
@@ -62,7 +74,7 @@ namespace Huellitas.Api.Controllers
         public async Task<IActionResult> PutProducto(int id, Producto producto)
         {
             // verificacion de id
-            if (id != producto.Id)
+            if (id != producto.idProducto)
             {
                 return BadRequest("El ID no coincide");
             }
@@ -79,7 +91,7 @@ namespace Huellitas.Api.Controllers
             {
                 // Si hay un error de concurrencia
                 // verificamos si el producto realmente existe
-                if (!_context.Productos.Any(e => e.Id == id))
+                if (!_context.Productos.Any(e => e.idProducto == id))
                 {
                     return NotFound();
                 }
