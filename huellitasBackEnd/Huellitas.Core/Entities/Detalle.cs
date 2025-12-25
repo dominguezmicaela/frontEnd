@@ -14,14 +14,14 @@ namespace Huellitas.Core
         [Column(TypeName = "decimal(18,2)")]
         public decimal precioUnitario{get; set;}
         // relacion con pedido
-        public int idPedido
+GCNotificationStatus==        public int idPedido {get;set;}
         [ForeignKey("idPedido")]
-        public virtual Pedido Pedido {get;set;}=null;
+        public virtual Pedido Pedido {get;set;}=null!;
 
         //conexion con producto
         public int idProducto{get;set;}
         [ForeignKey("idProducto")]
-        public virtual Producto producto{get;set;}= null;
+        public virtual Producto producto{get;set;}= null!;
         
     }
 }

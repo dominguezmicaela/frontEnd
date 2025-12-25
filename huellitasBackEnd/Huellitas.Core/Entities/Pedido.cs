@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
 
-public namespace Huellitas.Core
+namespace Huellitas.Core
 {
     [Table("Pedido")]
     public class Pedido
@@ -19,7 +19,7 @@ public namespace Huellitas.Core
 
         public int idUsuario{get;set;}
         [ForeignKey("idUsuario")]
-        public virtual Usuario Usuario {get;set;}=null;
+        public virtual Usuario Usuario {get;set;}=null!;
 
         public virtual ICollection<Detalle> detalles {get;set;}= new List<Detalle>();
 
