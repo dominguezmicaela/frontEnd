@@ -69,7 +69,7 @@ namespace Huellitas.Api.Controllers
             return Ok("Producto eliminado correctamente");
         }
         //ACTUALIZAR
-        // ACTUALIZAR UN PRODUCTO EXISTENTE
+        
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProducto(int id, Producto producto)
         {
