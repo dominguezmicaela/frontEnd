@@ -20,7 +20,6 @@ namespace Huellitas.Core.Entities{
         [Column(TypeName = "decimal(18,2)")]
         public decimal precio{get;set;}
         public string img{get;set;}=string.Empty;
-        public string desc{get;set;}=string.Empty;
         public int stockActual{get;set;}
         public int stockMinimo{get;set;}
         public int idCategoria{get;set;}
