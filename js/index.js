@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("contenedor-tarjetas");
   const carrito = obtenerCarrito();
   actualizarContador(carrito);
-  fetch("https://petshophuellitas.onrender.com/api/productos")//cambio ruta
+  fetch("https://petshophuellitas.onrender.com/api/productos") //cambio ruta
     .then((res) => {
       if (!res.ok) {
         throw new Error(`Error HTTP status: ${res.status}`); // prestar atencion al tipo de comillas
@@ -23,9 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const img = document.createElement("img");
         img.alt = producto.nombre;
-        img.src = `img/${producto.img}`;
-        
-  
+        if (producto.img && producto.img.startsWith("http")) {
+          img.src = producto.img;
+        } else {
+          img.src = `img/${producto.img}`;
+        }
+
         const titulo = document.createElement("h3");
         titulo.textContent = producto.nombre;
 
