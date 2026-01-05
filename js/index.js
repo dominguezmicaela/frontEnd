@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then((data) => {
       console.log("PRODUCTOS RECIBIDOS", data);
+      contenedor.innerHTML = "";
       //aca se hace el renderizado de las tarjetas con el for
       data.forEach((producto) => {
         const tarjeta = document.createElement("article");
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const img = document.createElement("img");
         img.alt = producto.nombre;
+
         if (producto.img && producto.img.startsWith("http")) {
           img.src = producto.img;
         } else {
@@ -42,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         boton.addEventListener("click", () => {
           agregarAlCarrito(producto);
         });
+
         tarjeta.appendChild(img);
         tarjeta.appendChild(titulo);
         tarjeta.appendChild(precio);

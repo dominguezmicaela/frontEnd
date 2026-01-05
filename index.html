@@ -26,25 +26,23 @@
           />
         </a>
       </div>
-    <nav class="menu-navegacion">
-    
-    <a href="./index.html" class="mi-boton">
-      <img src="./img/INICIO.png" class="icono-img" alt="Inicio"> 
-      Inicio
-    </a>
+      <nav class="menu-navegacion">
+        <a href="./index.html" class="mi-boton">
+          <img src="./img/INICIO.png" class="icono-img" alt="Inicio" />
+          Inicio
+        </a>
 
-    <a href="./pages/contacto.html" class="mi-boton">
-      <img src="./img/CONTACTO.png" class="icono-img" alt="Contacto">
-      Contacto
-    </a>
+        <a href="./pages/contacto.html" class="mi-boton">
+          <img src="./img/CONTACTO.png" class="icono-img" alt="Contacto" />
+          Contacto
+        </a>
 
-    <a href="./pages/carrito.html" class="mi-boton">
-      <img src="./img/CARRITO.png" class="icono-img" alt="Carrito">
-      Carrito
-      <span id="contador-carrito"></span>
-    </a>
-
-  </nav>
+        <a href="./pages/carrito.html" class="mi-boton">
+          <img src="./img/CARRITO.png" class="icono-img" alt="Carrito" />
+          Carrito
+          <span id="contador-carrito"></span>
+        </a>
+      </nav>
     </header>
 
     <main>
@@ -59,57 +57,74 @@
       </p>
       <section>
         <h2 class="titulo-productos">Nuestros productos</h2>
-        <div id="contenedor-tarjetas" class="contenedor-tarjetas"></div>
+
+        <div id="contenedor-tarjetas" class="contenedor-tarjetas">
+          <div class="loader"></div>
+          <p
+            class="texto-cargando"
+            style="text-align: center; color: #8d7958; margin-top: 10px"
+          >
+            Buscando productos...
+          </p>
+        </div>
       </section>
     </main>
     <section class="seccion-resenas">
-    <h2 class="titulo-resenas">Lo que dicen nuestros clientes</h2>
-    
-    <div class="contenedor-carrusel-resenas">
+      <h2 class="titulo-resenas">Lo que dicen nuestros clientes</h2>
+
+      <div class="contenedor-carrusel-resenas">
         <button class="flecha-resena" id="btn-prev-resena">&#10094;</button>
 
-        <div id="track-resenas" class="track-resenas">
-            </div>
+        <div id="track-resenas" class="track-resenas"></div>
 
         <button class="flecha-resena" id="btn-next-resena">&#10095;</button>
-    </div>
+      </div>
 
-    <div class="form-resena-wrapper">
+      <div class="form-resena-wrapper">
         <h3>¡Déjanos tu opinión!</h3>
         <form id="form-resena">
-            <input type="text" id="inputNombre" placeholder="Tu nombre" required>
-            <select id="inputEstrellas">
-                <option value="5">⭐⭐⭐⭐⭐ (5)</option>
-                <option value="4">⭐⭐⭐⭐ (4)</option>
-                <option value="3">⭐⭐⭐ (3)</option>
-                <option value="2">⭐⭐ (2)</option>
-                <option value="1">⭐ (1)</option>
-            </select>
-            <textarea id="inputComentario" placeholder="¿Qué te pareció el producto?" required></textarea>
-            <button type="submit" class="btn-publicar">Publicar Reseña</button>
+          <input
+            type="text"
+            id="inputNombre"
+            placeholder="Tu nombre"
+            required
+          />
+          <select id="inputEstrellas">
+            <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+            <option value="4">⭐⭐⭐⭐ (4)</option>
+            <option value="3">⭐⭐⭐ (3)</option>
+            <option value="2">⭐⭐ (2)</option>
+            <option value="1">⭐ (1)</option>
+          </select>
+          <textarea
+            id="inputComentario"
+            placeholder="¿Qué te pareció el producto?"
+            required
+          ></textarea>
+          <button type="submit" class="btn-publicar">Publicar Reseña</button>
         </form>
-    </div>
-</section>
-       <footer class="pie-pagina">
-    <p class="autor">Sitio realizado por Micaela</p>
-    
-    <nav class="redes-sociales">
+      </div>
+    </section>
+    <footer class="pie-pagina">
+      <p class="autor">Sitio realizado por Micaela</p>
+
+      <nav class="redes-sociales">
         <a href="#" target="_blank">
-            <img src="./img/INSTAGRAM.png" alt="Instagram" class="icono-img">
-            Instagram
+          <img src="./img/INSTAGRAM.png" alt="Instagram" class="icono-img" />
+          Instagram
         </a>
 
         <a href="#" target="_blank">
-            <img src="./img/WHATSAPP.png" alt="Whatsapp" class="icono-img">
-            Whatsapp
+          <img src="./img/WHATSAPP.png" alt="Whatsapp" class="icono-img" />
+          Whatsapp
         </a>
 
         <a href="#" target="_blank">
-            <img src="./img/FACEBOOK.png" alt="Facebook" class="icono-img">
-            Facebook
+          <img src="./img/FACEBOOK.png" alt="Facebook" class="icono-img" />
+          Facebook
         </a>
-    </nav>
-</footer>
+      </nav>
+    </footer>
     <script src="./js/index.js" type="module"></script>
     <script src="./js/resenas.js" type="module"></script>
   </body>
