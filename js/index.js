@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
         tarjeta.appendChild(img);
         tarjeta.appendChild(titulo);
         tarjeta.appendChild(precio);
-        tarjeta.appendChild(stockInfo);
         tarjeta.appendChild(boton);
         contenedor.appendChild(tarjeta);
       });
