@@ -93,6 +93,7 @@
   position: relative;
   overflow: hidden;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  order: 1;
 }
 
 /* Cuando está en modo registro, el panel se mueve a la derecha */
@@ -174,6 +175,7 @@
   justify-content: center;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   position: relative;
+  order: 2;
 }
 
 /* Cuando está en modo registro, el formulario se mueve a la izquierda */
@@ -185,11 +187,13 @@
 .login-forms-container {
   position: relative;
   width: 100%;
+  min-height: 580px;
 }
 
 .login-form-wrapper,
 .register-form-wrapper {
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: 100%;
 }
 
 /* Estado inicial: Login visible, Registro oculto */
@@ -197,6 +201,7 @@
   opacity: 1;
   transform: translateX(0) scale(1);
   pointer-events: auto;
+  position: relative;
 }
 
 .register-form-wrapper {
@@ -214,6 +219,9 @@
   opacity: 0;
   transform: translateX(-50px) scale(0.95);
   pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .login-card.register-mode .register-form-wrapper {
@@ -249,6 +257,7 @@
   display: flex;
   flex-direction: column;
   gap: 2.2rem;
+  min-height: 480px;
 }
 
 /* GRUPO DE CAMPO */
@@ -459,7 +468,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1.5rem;
+  margin-top: auto;
   padding-top: 1.5rem;
   border-top: 2px solid rgba(85, 124, 85, 0.1);
 }
