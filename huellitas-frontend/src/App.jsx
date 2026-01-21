@@ -2,6 +2,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import { Contacto } from "./pages/Contacto";
 import { Inicio } from "./pages/Inicio";
+import { Login } from "./pages/Login";
 
 function App() {
   return (
@@ -44,9 +45,8 @@ function App() {
         <Route path="/" element={<Inicio />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/carrito" element={<div>Página de Carrito</div>} />
-        <Route path="/login" element={<div>Página de Login</div>} />
+       <Route path="/login" element={<Login />} />
       </Routes>
-
       <footer className="pie-pagina">
         <p className="autor">Sitio realizado por Micaela</p>
         <nav className="redes-sociales">
